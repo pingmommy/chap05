@@ -64,9 +64,11 @@ public class EpochTimeExample2 {
 		
 		
 		// 나머지가 1이 아니면 변수에 +1을 해라 | 30,31이 넘어가는 시점에는 어떻게 계산될까? 다시 1 되어야 하는데..
-		
-		day=(int)epoch/60/60/24;  
-		
+		//System.out.println(epoch);
+
+		day=(int)Math.ceil(epoch/60/60/24.0);  
+		///System.out.println(day);
+
 		
 		
 		hour=(int)epoch/60/60%24;
@@ -74,7 +76,9 @@ public class EpochTimeExample2 {
 		second = (int)epoch%60%60;
 		
 		System.out.printf("%d년 %d월 %d일 %d시 %d분 %d초",year,month,day,hour,minute,second);
-		System.out.println(epoch);
+		//System.out.println(epoch);
+		
+		
 	}
 
 }
